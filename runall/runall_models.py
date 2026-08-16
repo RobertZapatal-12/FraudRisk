@@ -1,5 +1,5 @@
 from src.preprocessing.preprocess import preprocess
-from src.training.training import training, training_tree, save_model
+from src.training.training import training, training_tree, save_model_lr, save_model_tree
 from src.evaluation.evaluate import evaluate_model
 import pandas as pd
 
@@ -13,7 +13,7 @@ def run_logistic_regresion():
 
     evalu = evaluate_model(model_lr)
 
-    save_model(model_lr)
+    save_model_lr(model_lr)
 
     print("=" *25)
     print("Logistics Regression")
@@ -29,7 +29,7 @@ def run_decision_tree():
 
     evalu = evaluate_model(model_tree)
 
-    save_model(model_tree)
+    save_model_tree(model_tree)
 
     print("=" *25)
     print("Decision Tree")

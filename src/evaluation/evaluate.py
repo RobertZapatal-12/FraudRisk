@@ -1,7 +1,6 @@
 import pandas as pd
 from src.preprocessing.preprocess import preprocess
-from src.training.training import training
-from src.training.training import training_tree
+from src.training.training import training, training_tree
 from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
 
 

@@ -13,8 +13,11 @@ def training_tree(x_train_scaled, y_train):
     return model
 
 
-def save_model(model):
+def save_model_lr(model):
     joblib.dump(model, "models/logistic_creditcard_model.pkl")
+
+def save_model_tree(model):
+    joblib.dump(model, "models/tree_creditcard_model.pkl")
 
 
 
