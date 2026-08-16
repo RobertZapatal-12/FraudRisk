@@ -1,5 +1,6 @@
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 def training(x_train_scaled, y_train):
@@ -12,12 +13,21 @@ def training_tree(x_train_scaled, y_train):
     model.fit(x_train_scaled, y_train)
     return model
 
+def training_forest(x_train_scaled, y_train):
+    model = RandomForestClassifier()
+    model.fit(x_train_scaled, y_train)
+    return model
+
 
 def save_model_lr(model):
     joblib.dump(model, "models/logistic_creditcard_model.pkl")
 
 def save_model_tree(model):
     joblib.dump(model, "models/tree_creditcard_model.pkl")
+
+def save_model_forest(model):
+    joblib.dump(model, "models/forest_creditcard_model.pkl")
+
 
 
 
