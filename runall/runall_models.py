@@ -1,5 +1,5 @@
 from src.preprocessing.preprocess import preprocess
-from src.training.training import training, save_model 
+from src.training.training import training, training_tree, save_model
 from src.evaluation.evaluate import evaluate_model
 import pandas as pd
 
@@ -19,3 +19,21 @@ def run_logistic_regresion():
     print("Logistics Regression")
     print("=" *25)
     print(evalu)
+
+def run_decision_tree():
+    df = pd.read_csv("data/processed/creditcard_clean.csv")
+
+    x_train_scaled, x_test_scaled, y_train, y_test = preprocess(df)
+
+    model_tree = training_tree(x_train_scaled, y_train)
+
+    evalu = evaluate_model(model_tree)
+
+    save_model(model_tree)
+
+    print("=" *25)
+    print("Decision Tree")
+    print("=" *25)
+    print(evalu)
+
+    
