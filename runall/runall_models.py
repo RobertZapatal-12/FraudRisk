@@ -13,6 +13,7 @@ from src.training.training import (
 
 
 def run_logistic_regresion():
+    """ """
     df = pd.read_csv("data/processed/creditcard_clean.csv")
     x_train_scaled, x_test_scaled, y_train, y_test = preprocess(df)
 
@@ -28,6 +29,7 @@ def run_logistic_regresion():
 
 
 def run_decision_tree():
+    """ """
     df = pd.read_csv("data/processed/creditcard_clean.csv")
     x_train_scaled, x_test_scaled, y_train, y_test = preprocess(df)
 
@@ -43,6 +45,7 @@ def run_decision_tree():
 
 
 def run_random_forest():
+    """ """
     df = pd.read_csv("data/processed/creditcard_clean.csv")
     x_train_scaled, x_test_scaled, y_train, y_test = preprocess(df)
 

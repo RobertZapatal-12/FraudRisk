@@ -8,6 +8,11 @@ from runall.runall_models import (
 
 
 def main():
+    """Execute all machine learning models in parallel.
+    
+    Trains and evaluates three models (Logistic Regression, Decision Tree, 
+    and Random Forest) concurrently using a process pool executor.
+    """
     with ProcessPoolExecutor(max_workers=3) as executor:
         futures = [
             executor.submit(run_logistic_regresion),
