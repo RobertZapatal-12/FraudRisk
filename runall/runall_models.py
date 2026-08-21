@@ -13,7 +13,14 @@ from src.training.training import (
 
 
 def run_logistic_regresion():
-    """ """
+    """Run the complete ML pipeline for Logistic Regression.
+    
+    Performs data preprocessing, trains a logistic regression model, 
+    evaluates its performance, and saves the trained model to disk.
+
+    Returns:
+        str: Formatted evaluation metrics (Accuracy, F1-Score, Recall, Precision).
+    """
     df = pd.read_csv("data/processed/creditcard_clean.csv")
     x_train_scaled, x_test_scaled, y_train, y_test = preprocess(df)
 
@@ -29,7 +36,14 @@ def run_logistic_regresion():
 
 
 def run_decision_tree():
-    """ """
+    """Run the complete ML pipeline for Decision Tree Classifier.
+    
+    Performs data preprocessing, trains a decision tree model, 
+    evaluates its performance, and saves the trained model to disk.
+
+    Returns:
+        str: Formatted evaluation metrics (Accuracy, F1-Score, Recall, Precision).
+    """
     df = pd.read_csv("data/processed/creditcard_clean.csv")
     x_train_scaled, x_test_scaled, y_train, y_test = preprocess(df)
 
@@ -45,7 +59,14 @@ def run_decision_tree():
 
 
 def run_random_forest():
-    """ """
+    """Run the complete ML pipeline for Random Forest Classifier.
+    
+    Performs data preprocessing, trains a random forest model, 
+    evaluates its performance, and saves the trained model to disk.
+
+    Returns:
+        str: Formatted evaluation metrics (Accuracy, F1-Score, Recall, Precision).
+    """
     df = pd.read_csv("data/processed/creditcard_clean.csv")
     x_train_scaled, x_test_scaled, y_train, y_test = preprocess(df)
 
